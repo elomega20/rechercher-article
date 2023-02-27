@@ -38,9 +38,10 @@ def similaire(tab_vector,request,data,topN=50):
         if sim_cos<1:
             d = {
                 'identifiantArticle': data.iloc[i,1],
+                'urlArticle' : data.iloc[i,2],
                 'titreArticle': data.iloc[i,6],
                 'similarite': sim_cos,
-                'contenuArticle': data.iloc[i,7]
+                'resumeArticle': data.iloc[i,7]
             }
             my_df.append(d)
     ##On trie
