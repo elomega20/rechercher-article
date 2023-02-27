@@ -31,7 +31,7 @@ def doc_plus_pertinent(requete):
     ##Le dernier element du dataFrame
     request = tdidf_df.iloc[N,:].values
     
-    plus_pertinent = similaire(tdidf_df,request,data,10)
+    plus_pertinent = similaire(tdidf_df,request,data,30)
     if len(plus_pertinent) > 0 :
         doc_json = plus_pertinent.to_json(orient='records')
         return doc_json
